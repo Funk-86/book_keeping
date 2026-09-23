@@ -33,7 +33,12 @@ build/
 ### VS Code ###
 .vscode/
 
-.cursor
-!**/src/main/resources/application.yml
-!**/src/main/resources/application-local.yml
-!**/src/main/resources/application-prod.yml
+.cursor/
+
+# 环境配置含账号密码等敏感信息，忽略不提交（本地自行维护）
+**/src/main/resources/application.yml
+**/src/main/resources/application-local.yml
+**/src/main/resources/application-prod.yml
+**/src/main/resources/application*.yml
+**/src/main/resources/application*.yaml
+**/src/main/resources/application*.properties
