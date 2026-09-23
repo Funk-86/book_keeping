@@ -46,14 +46,6 @@ public enum ResultCode {
         this.message = message;
     }
 
-    public int getCode() {
-        return code;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
     public static ResultCode fromCode(int code) {
         for (ResultCode value : values()) {
             if (value.code == code) {
