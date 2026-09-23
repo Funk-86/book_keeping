@@ -22,6 +22,7 @@ public class Result<T> implements Serializable {
         this.code = code;
         this.message = message;
         this.data = data;
+        this.timestamp = System.currentTimeMillis();
     }
 
     public static <T> Result<T> success(T data) {
