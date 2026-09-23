@@ -22,4 +22,9 @@ public class BusinessException extends RuntimeException {
         super(message);
         this.code = code;
     }
+
+    public BusinessException(String message) {
+        super(message);
+        this.code = ResultCode.TRANSACTION_AMOUNT_INVALID.getCode();
+    }
 }

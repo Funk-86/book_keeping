@@ -36,7 +36,9 @@ public enum ResultCode {
 
     INTERNAL_ERROR(5000, "系统繁忙，请稍后再试"),
     DB_ERROR(5001, "数据服务异常"),
-    EXTERNAL_ERROR(5002, "外部服务异常");
+    EXTERNAL_ERROR(5002, "外部服务异常"),
+
+    TRANSACTION_AMOUNT_INVALID(6001, "业务错误");
 
     private final int code;
     private final String message;
