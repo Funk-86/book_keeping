@@ -10,7 +10,7 @@ import java.util.List;
  * 账单批量同步请求体。
  */
 @Data
-public class TransactionSyncRequest {
+public class TransactionSyncDTO {
 
     @NotEmpty(message = "账单列表不能为空")
     @Valid

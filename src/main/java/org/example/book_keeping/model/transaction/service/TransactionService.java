@@ -1,15 +1,14 @@
 package org.example.book_keeping.model.transaction.service;
 
-import org.example.book_keeping.model.transaction.dto.TransactionSyncRequest;
+import org.example.book_keeping.common.dto.PageQuery;
+import org.example.book_keeping.common.result.PageResult;
+import org.example.book_keeping.model.transaction.dto.TransactionListDTO;
+import org.example.book_keeping.model.transaction.dto.TransactionSyncDTO;
 import org.example.book_keeping.model.transaction.vo.TransactionSyncResultVO;
+import org.example.book_keeping.model.transaction.vo.TransactionVO;
 
 public interface TransactionService {
 
-    /**
-     * 批量同步账单：去重 + 智能分类 + 入库。
-     *
-     * @param request 批量账单
-     * @return accepted / duplicates / suspects
-     */
-    TransactionSyncResultVO sync(TransactionSyncRequest request);
+    TransactionSyncResultVO sync(TransactionSyncDTO dto);
+    PageResult<TransactionVO> list(TransactionListDTO dto);
 }
